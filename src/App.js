@@ -79,12 +79,13 @@ export default function App() {
   };
 
   const handleUpdateTask = async (task) => {
-    const newTask = { ...task, id: Date.now() };
 
-    setAllTasks((prev) => [...prev, newTask]);
+    setAllTasks((prev) => prev.map((t) => {
+      return t.id === task.id ? { ...task } : { ...t };
+    }));
 
     try {
-      await updateTask(task);
+      await updateTask(task.id, task);
     } catch (err) {
       alert(err);
     }
@@ -127,7 +128,7 @@ export default function App() {
             <AddTaskForm
               initialValues={operationTask}
               onAdd={(task) => {
-                handleAddTask(task);
+                operationTask ? handleUpdateTask(task) : handleAddTask(task);
                 setShowModal(false);
                 setOperationTask(undefined);
               }}
@@ -143,7 +144,11 @@ export default function App() {
       <div className="App">
         <h1>Task management</h1>
         <h3>Here you can manage your tasks</h3>
-        <button className="add-btn" onClick={() => setShowModal(true)}>
+        <button className="add-btn" onClick={() => {
+          setOperationTask(undefined);
+          setShowModal(true)
+        }
+        }>
           + Add Task
         </button>
         {loading && <p>

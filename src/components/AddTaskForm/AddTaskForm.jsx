@@ -92,7 +92,7 @@ export default function AddTaskForm({ initialValues, onAdd, onCancel }) {
                 onChange={handleChange}
             />
 
-            <button type="submit">Add Task</button>
+            <button type="submit">{initialValues ? 'Update' : 'Add'} Task</button>
             <button type="button" onClick={onCancel}>
                 Cancel
             </button>
