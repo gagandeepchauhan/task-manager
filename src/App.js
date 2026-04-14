@@ -142,7 +142,7 @@ export default function App() {
         </div>
       )}
       <div className="App">
-        <h1>Task management</h1>
+        <h1>Sky Task management</h1>
         <h3>Here you can manage your tasks</h3>
         <button className="add-btn" onClick={() => {
           setOperationTask(undefined);
