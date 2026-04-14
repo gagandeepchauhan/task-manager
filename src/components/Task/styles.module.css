@@ -1,0 +1,29 @@
+.taskDiv {
+    /* background-color: bisque; */
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+    border: 1px solid #fff;
+}
+
+.title {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.content {
+    font-size: 12px;
+}
+
+.actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.actions button {
+    background: none;
+    border: 1px solid #fff;
+    padding: 5px 8px;
+}

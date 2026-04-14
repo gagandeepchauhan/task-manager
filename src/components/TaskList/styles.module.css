@@ -1,0 +1,26 @@
+.container {
+    width: 30%;
+    margin-left: 20px;
+    /* background-color: aqua; */
+    padding: 5px;
+    border-radius: 10px;
+    min-height: 200px;
+    border: 1px solid #fff;
+
+}
+
+.head {
+    font-size: 16px;
+    padding: 5px 8px;
+    background-color: black;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
