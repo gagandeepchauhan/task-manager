@@ -6,7 +6,7 @@
     border-radius: 10px;
     min-height: 200px;
     border: 1px solid #fff;
-
+    min-width: 200px;
 }
 
 .head {
